@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		EFFAF16F28F22AAD0038AE4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFAF16E28F22AAD0038AE4C /* AppDelegate.swift */; };
 		EFFAF17128F22AAD0038AE4C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFAF17028F22AAD0038AE4C /* SceneDelegate.swift */; };
-		EFFAF17328F22AAD0038AE4C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFAF17228F22AAD0038AE4C /* ViewController.swift */; };
-		EFFAF17628F22AAD0038AE4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFFAF17428F22AAD0038AE4C /* Main.storyboard */; };
+		EFFAF17328F22AAD0038AE4C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFAF17228F22AAD0038AE4C /* MainViewController.swift */; };
 		EFFAF17828F22AAD0038AE4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFFAF17728F22AAD0038AE4C /* Assets.xcassets */; };
 		EFFAF17B28F22AAD0038AE4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFFAF17928F22AAD0038AE4C /* LaunchScreen.storyboard */; };
+		EFFAF18C28F230D60038AE4C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFAF18B28F230D60038AE4C /* MainView.swift */; };
+		EFFAF19028F231880038AE4C /* ITunesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFAF18F28F231870038AE4C /* ITunesAPI.swift */; };
+		EFFAF19328F234620038AE4C /* PodcastResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFAF19228F234620038AE4C /* PodcastResponse.swift */; };
+		EFFAF19528F234E80038AE4C /* Podcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFAF19428F234E80038AE4C /* Podcast.swift */; };
+		EFFAF19828F246770038AE4C /* PodcastCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFAF19728F246770038AE4C /* PodcastCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EFFAF16B28F22AAD0038AE4C /* ITunes Client App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ITunes Client App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFFAF16E28F22AAD0038AE4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFFAF17028F22AAD0038AE4C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EFFAF17228F22AAD0038AE4C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		EFFAF17528F22AAD0038AE4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EFFAF17228F22AAD0038AE4C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		EFFAF17728F22AAD0038AE4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EFFAF17A28F22AAD0038AE4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EFFAF17C28F22AAD0038AE4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFFAF18B28F230D60038AE4C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		EFFAF18F28F231870038AE4C /* ITunesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITunesAPI.swift; sourceTree = "<group>"; };
+		EFFAF19228F234620038AE4C /* PodcastResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastResponse.swift; sourceTree = "<group>"; };
+		EFFAF19428F234E80038AE4C /* Podcast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Podcast.swift; sourceTree = "<group>"; };
+		EFFAF19728F246770038AE4C /* PodcastCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,123 @@
 		EFFAF16D28F22AAD0038AE4C /* ITunes Client App */ = {
 			isa = PBXGroup;
 			children = (
-				EFFAF16E28F22AAD0038AE4C /* AppDelegate.swift */,
-				EFFAF17028F22AAD0038AE4C /* SceneDelegate.swift */,
-				EFFAF17228F22AAD0038AE4C /* ViewController.swift */,
-				EFFAF17428F22AAD0038AE4C /* Main.storyboard */,
-				EFFAF17728F22AAD0038AE4C /* Assets.xcassets */,
-				EFFAF17928F22AAD0038AE4C /* LaunchScreen.storyboard */,
-				EFFAF17C28F22AAD0038AE4C /* Info.plist */,
+				EFFAF18628F22B880038AE4C /* Screens */,
+				EFFAF18228F22AFF0038AE4C /* App */,
 			);
 			path = "ITunes Client App";
+			sourceTree = "<group>";
+		};
+		EFFAF18228F22AFF0038AE4C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				EFFAF18D28F2314D0038AE4C /* Core */,
+				EFFAF18728F22BA80038AE4C /* Plists */,
+				EFFAF18528F22B490038AE4C /* Views */,
+				EFFAF18428F22B310038AE4C /* Assets */,
+				EFFAF18328F22B070038AE4C /* Delegates */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		EFFAF18328F22B070038AE4C /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				EFFAF16E28F22AAD0038AE4C /* AppDelegate.swift */,
+				EFFAF17028F22AAD0038AE4C /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		EFFAF18428F22B310038AE4C /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				EFFAF17728F22AAD0038AE4C /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		EFFAF18528F22B490038AE4C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EFFAF17928F22AAD0038AE4C /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EFFAF18628F22B880038AE4C /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				EFFAF18828F22BD80038AE4C /* Main */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		EFFAF18728F22BA80038AE4C /* Plists */ = {
+			isa = PBXGroup;
+			children = (
+				EFFAF17C28F22AAD0038AE4C /* Info.plist */,
+			);
+			path = Plists;
+			sourceTree = "<group>";
+		};
+		EFFAF18828F22BD80038AE4C /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				EFFAF19128F2343B0038AE4C /* Model */,
+				EFFAF18A28F22C050038AE4C /* View */,
+				EFFAF18928F22BF50038AE4C /* Controller */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		EFFAF18928F22BF50038AE4C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EFFAF17228F22AAD0038AE4C /* MainViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EFFAF18A28F22C050038AE4C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EFFAF19628F246230038AE4C /* PodcastCollectionViewCell */,
+				EFFAF18B28F230D60038AE4C /* MainView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EFFAF18D28F2314D0038AE4C /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				EFFAF18E28F231640038AE4C /* Network */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		EFFAF18E28F231640038AE4C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				EFFAF18F28F231870038AE4C /* ITunesAPI.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		EFFAF19128F2343B0038AE4C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EFFAF19228F234620038AE4C /* PodcastResponse.swift */,
+				EFFAF19428F234E80038AE4C /* Podcast.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EFFAF19628F246230038AE4C /* PodcastCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				EFFAF19728F246770038AE4C /* PodcastCollectionViewCell.swift */,
+			);
+			path = PodcastCollectionViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +243,6 @@
 			files = (
 				EFFAF17B28F22AAD0038AE4C /* LaunchScreen.storyboard in Resources */,
 				EFFAF17828F22AAD0038AE4C /* Assets.xcassets in Resources */,
-				EFFAF17628F22AAD0038AE4C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +253,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFFAF17328F22AAD0038AE4C /* ViewController.swift in Sources */,
+				EFFAF17328F22AAD0038AE4C /* MainViewController.swift in Sources */,
+				EFFAF19528F234E80038AE4C /* Podcast.swift in Sources */,
+				EFFAF19328F234620038AE4C /* PodcastResponse.swift in Sources */,
+				EFFAF18C28F230D60038AE4C /* MainView.swift in Sources */,
+				EFFAF19028F231880038AE4C /* ITunesAPI.swift in Sources */,
 				EFFAF16F28F22AAD0038AE4C /* AppDelegate.swift in Sources */,
 				EFFAF17128F22AAD0038AE4C /* SceneDelegate.swift in Sources */,
+				EFFAF19828F246770038AE4C /* PodcastCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		EFFAF17428F22AAD0038AE4C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EFFAF17528F22AAD0038AE4C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		EFFAF17928F22AAD0038AE4C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -289,10 +401,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = G8U44R4USM;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "ITunes Client App/Info.plist";
+				INFOPLIST_FILE = "ITunes Client App/App/Plists/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -302,9 +413,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ehlkara.ITunes-Client-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -317,10 +431,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = G8U44R4USM;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "ITunes Client App/Info.plist";
+				INFOPLIST_FILE = "ITunes Client App/App/Plists/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -330,9 +443,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ehlkara.ITunes-Client-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
