@@ -8,33 +8,39 @@
 import UIKit
 
 final class MainView: UIView {
-    // MARK - Properties
+    // MARK: - Properties
+    private let cellInset: CGFloat = 8.0
+    private let cellMultiplier: CGFloat = 0.5
+    private var cellDimension: CGFloat {
+        .screenWidth * cellMultiplier - cellInset
+    }
     
     private lazy var flowLayout: UICollectionViewFlowLayout = {
         let flowLayout = UICollectionViewFlowLayout()
-        flowLayout.itemSize = CGSize(width: 128.0, height: 128.0)
+        flowLayout.itemSize = CGSize(width: cellDimension,
+                                     height: cellDimension)
         return flowLayout
     }()
     
     private lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
     
     // MARK: - Init
-    init(){
+    init() {
         super.init(frame: .zero)
         backgroundColor = .gray
         
         collectionView.register(PodcastCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
         setupCollectionViewLayout()
     }
-    required init(coder: NSCoder) {
-        fatalError("initError: has not been implemented")
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     // MARK: - Methods
     private func setupCollectionViewLayout() {
         addSubview(collectionView)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
-        
         NSLayoutConstraint.activate([
             collectionView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             collectionView.topAnchor.constraint(equalTo: self.topAnchor),
@@ -43,7 +49,8 @@ final class MainView: UIView {
         ])
     }
     
-    func setCollectionViewDelegate(_ delegate: UICollectionViewDelegate, andDataSource dataSource: UICollectionViewDataSource){
+    func setCollectionViewDelegate(_ delegate: UICollectionViewDelegate,
+                                   andDataSource dataSource: UICollectionViewDataSource) {
         collectionView.delegate = delegate
         collectionView.dataSource = dataSource
     }
