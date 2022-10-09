@@ -8,7 +8,7 @@
 import Foundation
 import CoreData
 
-@objc(FavoriteMedia)
+@objc(favoriteMedia)
 public class favoriteMedia: NSManagedObject {
 
 }
